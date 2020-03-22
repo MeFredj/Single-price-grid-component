@@ -1,0 +1,129 @@
+:root {
+    /* primary */
+    --cyan:hsl(179, 62%, 43%);
+    --off-cyan: #4abebd;
+    --bright-yellow: hsl(71, 73%, 54%);
+    --white: #fff;
+    /* fundamental */
+    --light-grey: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", "Arial", sans-serif;
+}
+
+body {
+    background-color: var(--light-grey);
+    height: 100vh;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "grid-header grid-header"
+        "grid-left-area grid-right-area";
+    width: 55%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid-header {
+    background-color: var(--white);
+    grid-area: grid-header;
+}
+
+
+.grid-left-area {
+    background-color: var(--cyan);
+    grid-area: grid-left-area;
+}
+
+.grid-right-area {
+    background-color: var(--off-cyan);
+    grid-area: grid-right-area;
+}
+
+.grid-content {
+    padding: 40px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: var(--cyan);
+}
+
+h2 {
+    color: var(--bright-yellow);
+}
+
+h3, #price, .price-subheading {
+    color: var(--white);
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+}
+
+.header-subheader {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+#price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    padding-right: 15px;
+}
+
+#per-month, .price-subheading {
+    color: var(--light-grey);
+}
+
+.price-subheading {
+    margin: 0 0 30px 0;
+}
+
+.btn {
+    background: var(--bright-yellow);
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-family: "Karla", "Arial", sans-serif;
+    border: 0px;
+    -webkit-box-shadow: 0px 32px 39px -22px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 32px 39px -22px rgba(0,0,0,0.25);
+box-shadow: 0px 32px 39px -22px rgba(0,0,0,0.25);
+}
+
+ul {
+    color: var(--light-grey);
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 2px 0;
+}
